@@ -11,6 +11,7 @@ services:
     ports:
       - "2053:2053"
       - "443:443/tcp"
+      - "2096:2096/tcp"
 
 volumes:
   xui-data:
