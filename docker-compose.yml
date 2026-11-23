@@ -1,0 +1,17 @@
+
+services:
+  3x-ui:
+    image: ghcr.io/mhsanaei/3x-ui:latest
+    container_name: 3x-ui
+    restart: unless-stopped
+    tty: true
+    volumes:
+      - xui-data:/etc/x-ui
+      - xui-cert:/root/cert
+    ports:
+      - "2053:2053"
+      - "443:443/tcp"
+
+volumes:
+  xui-data:
+  xui-cert:
